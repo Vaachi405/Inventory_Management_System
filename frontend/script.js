@@ -15,7 +15,7 @@ let salesChart = null;
 
 // ==================== BACKEND API CONFIG ====================
 // If your backend runs elsewhere, change this one value.
-const API_BASE = 'http://localhost:5000';
+const API_BASE = 'https://inventory-management-system-a3gj.onrender.com/';
 const AUTH_TOKEN_KEY = 'ims_token';
 
 function normalizeProduct(p) {
