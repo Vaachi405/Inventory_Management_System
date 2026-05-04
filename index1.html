@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Inventory Management System | Business Dashboard</title>
+    <!-- Font Awesome 6 (free icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <!-- Authentication Container -->
+    <div id="auth-container" style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+        <!-- Login/Register card will be injected here -->
+    </div>
+
+    <!-- Main App Layout -->
+    <div id="app-layout" style="display: none;">
+        <div class="app-container">
+            <!-- Sidebar Navigation -->
+            <aside class="sidebar" id="sidebar">
+                <div class="sidebar-header">
+                    <i class="fas fa-boxes"></i>
+                    <span>StockFlow</span>
+                </div>
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item active" data-page="dashboard">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Dashboard</span>
+                    </li>
+                    <li class="nav-item" data-page="products">
+                        <i class="fas fa-cubes"></i>
+                        <span>Products</span>
+                    </li>
+                    <li class="nav-item" data-page="suppliers">
+                        <i class="fas fa-truck"></i>
+                        <span>Suppliers</span>
+                    </li>
+                    <li class="nav-item" data-page="inventory">
+                        <i class="fas fa-warehouse"></i>
+                        <span>Inventory</span>
+                    </li>
+                    <li class="nav-item" data-page="orders">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Orders</span>
+                    </li>
+                    <li class="nav-item" data-page="reports">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Reports</span>
+                    </li>
+                </ul>
+            </aside>
+
+            <!-- Main Content Area -->
+            <div class="main-content">
+                <!-- Top Header -->
+                <div class="top-header">
+                    <div class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="globalSearch" placeholder="Search products...">
+                    </div>
+                    <div class="user-profile">
+                        <span id="userNameDisplay">
+                            <i class="fas fa-user-circle"></i>
+                            <span>User</span>
+                        </span>
+                        <button class="theme-toggle" id="themeToggle">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                        <button class="logout-btn" id="logoutBtn">
+                            <i class="fas fa-sign-out-alt"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Dynamic Page Content -->
+                <div id="page-content">
+                    <!-- Pages will be injected here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="script1.js"></script>
+</body>
+</html>
