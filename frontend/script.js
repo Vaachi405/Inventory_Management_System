@@ -24,9 +24,15 @@ function normalizeProduct(p) {
     return { ...p, id: p._id || p.id };
 }
 
+function apiUrl(path) {
+    const base = String(API_BASE).replace(/\/+$/, '');
+    const p = path.startsWith('/') ? path : `/${path}`;
+    return `${base}${p}`;
+}
+
 async function apiRequest(path, options = {}) {
     const token = localStorage.getItem(AUTH_TOKEN_KEY);
-    const res = await fetch(`${API_BASE}${path}`, {
+    const res = await fetch(apiUrl(path), {
         ...options,
         headers: {
             'Content-Type': 'application/json',
